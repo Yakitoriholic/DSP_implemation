@@ -1,12 +1,12 @@
 #include "config.h"
 #include "mathops.h"
 
-
+//计算_v的对数
 int ec_ilog(unsigned int _v){
 
 	int ret;
 	int m;
-	ret=!!_v;
+	ret=!!_v;//！！判断_v是否为0
 	m=!!(_v&0xFFFF0000)<<4;
 	_v>>=m;
 	ret|=m;
